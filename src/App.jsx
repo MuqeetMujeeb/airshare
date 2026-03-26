@@ -12,7 +12,7 @@ export default function App() {
       <Hero />
       <Integrations />
       <Workflow />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <Comparison />
       <CTA />
     </Layout>

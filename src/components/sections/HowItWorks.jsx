@@ -45,11 +45,11 @@ export default function HowItWorks() {
           <h2 className="font-serif text-4xl mb-4">How It Works</h2>
           <p className="text-slate-600">The seamless creator-to-editor pipeline.</p>
         </div>
-        
+
         {/* Step 1: Record */}
         <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 w-full max-w-sm flex flex-col items-center">
           <div className="w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /><path d="m21.854 2.147-10.94 10.939" /></svg>
           </div>
           <h3 className="font-bold text-lg mb-2">1. Record & Upload</h3>
           <p className="text-slate-600 text-center text-sm">Capture footage on your phone and chunks upload instantly.</p>
@@ -58,7 +58,7 @@ export default function HowItWorks() {
         {/* Step 2: Cloud */}
         <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 w-full max-w-sm flex flex-col items-center">
           <div className="w-16 h-16 bg-sky-500 text-white rounded-2xl flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></svg>
           </div>
           <h3 className="font-bold text-lg mb-2">2. Real-Time Sync</h3>
           <p className="text-slate-600 text-center text-sm">Footage appears in the cloud securely before you even stop recording.</p>
@@ -67,7 +67,7 @@ export default function HowItWorks() {
         {/* Step 3: Edit */}
         <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 w-full max-w-sm flex flex-col items-center">
           <div className="w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="15" x2="15" y1="3" y2="21"/><line x1="9" x2="9" y1="3" y2="21"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><line x1="15" x2="15" y1="3" y2="21" /><line x1="9" x2="9" y1="3" y2="21" /><path d="M3 9h18" /><path d="M3 15h18" /></svg>
           </div>
           <h3 className="font-bold text-lg mb-2">3. Edit Instantly</h3>
           <p className="text-slate-600 text-center text-sm">Editors pull footage directly into their timeline, seconds after capture.</p>
@@ -77,17 +77,17 @@ export default function HowItWorks() {
       {/* 
         Desktop Cinematic Scroll 
       */}
-      <div 
+      <div
         ref={containerRef}
         className="hidden md:block h-[400vh] w-full"
       >
         <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-slate-50">
-          
+
           {/* Central Stage */}
           <div className="relative w-full max-w-6xl mx-auto h-[600px] flex items-center justify-center">
-            
+
             {/* 1. Phone UI */}
-            <motion.div 
+            <motion.div
               style={{ scale: phoneScale, y: phoneY, x: phoneX }}
               className="absolute z-30 w-64 h-[500px] bg-slate-900 rounded-[2.5rem] border-8 border-slate-800 shadow-2xl overflow-hidden flex flex-col"
             >
@@ -95,13 +95,13 @@ export default function HowItWorks() {
               <div className="flex-1 bg-slate-800 relative flex items-center justify-center">
                 {/* Camera Viewfinder Mockup */}
                 <div className="absolute inset-4 rounded-3xl border border-white/10" />
-                
+
                 {/* Recording indicator */}
                 <div className="absolute top-6 flex items-center gap-2 bg-black/50 px-3 py-1 rounded-full backdrop-blur-md">
-                  <motion.div 
+                  <motion.div
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{ repeat: Infinity, duration: 1.5 }}
-                    className="w-2 h-2 rounded-full bg-red-500" 
+                    className="w-2 h-2 rounded-full bg-red-500"
                   />
                   <span className="text-white text-xs font-mono">00:14:32</span>
                 </div>
@@ -109,12 +109,12 @@ export default function HowItWorks() {
             </motion.div>
 
             {/* 2. Upload Chunks Stream */}
-            <motion.div 
+            <motion.div
               style={{ opacity: chunksOpacity, y: chunksY }}
               className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-4"
             >
               {[0, 1, 2].map((i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   animate={{ y: [0, -40, -80], opacity: [0, 1, 0] }}
                   transition={{ repeat: Infinity, duration: 2, delay: i * 0.6 }}
@@ -132,7 +132,7 @@ export default function HowItWorks() {
             >
               <div className="flex justify-between items-center mb-6">
                 <div className="flex items-center gap-2 text-sky-600 font-semibold">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></svg>
                   <span>Airshare Cloud</span>
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function HowItWorks() {
                 <div className="w-3 h-3 rounded-full bg-slate-700"></div>
                 <div className="w-3 h-3 rounded-full bg-slate-700"></div>
               </div>
-              
+
               {/* Timeline Mockup */}
               <div className="flex-1 bg-slate-800 rounded-lg p-3 flex flex-col gap-2">
                 <div className="flex gap-2">
@@ -180,12 +180,12 @@ export default function HowItWorks() {
               </div>
 
               {/* 5. Avatar/Badges Overlay */}
-              <motion.div 
+              <motion.div
                 style={{ opacity: badgesOpacity, scale: badgesScale }}
                 className="absolute -top-4 -right-4 bg-white px-4 py-2 rounded-full shadow-lg border border-slate-100 flex items-center gap-2"
               >
                 <div className="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" /></svg>
                 </div>
                 <span className="text-sm font-semibold text-slate-800 border-l border-slate-200 pl-2">V2 Approved</span>
               </motion.div>
@@ -197,11 +197,11 @@ export default function HowItWorks() {
           {/* Guide Text at bottom of screen */}
           <div className="absolute bottom-12 left-0 right-0 text-center text-slate-400 font-medium tracking-wide text-sm flex flex-col items-center gap-2">
             Keep Scrolling
-            <motion.div 
-              animate={{ y: [0, 8, 0] }} 
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg>
             </motion.div>
           </div>
         </div>

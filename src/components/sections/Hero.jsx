@@ -11,41 +11,50 @@ export default function Hero() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    show: { 
-      opacity: 1, 
-      y: 0, 
+    show: {
+      opacity: 1,
+      y: 0,
       transition: { type: 'spring', stiffness: 100, damping: 20 }
     },
   };
 
   return (
     <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-white pt-20 pb-32">
-      
-      {/* Background abstract gradients */}
+
+      {/* Background abstract gradients
       <div className="absolute top-0 w-full h-full overflow-hidden -z-10 bg-white">
-        <motion.div 
+        <motion.div
           animate={{ x: [0, 50, 0], y: [0, 30, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          className="absolute top-10 -left-20 w-96 h-96 bg-sky-200/50 rounded-full blur-3xl opacity-60"
+          className="absolute top-10 -left-20 w-96 h-96"
         />
-        <motion.div 
+        <motion.div
           animate={{ x: [0, -40, 0], y: [0, -20, 0] }}
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-10 -right-20 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl opacity-60"
+          className="absolute bottom-10 -right-20 w-96 h-96"
         />
-      </div>
+      </div> */}
 
-      <motion.div 
-        className="max-w-4xl mx-auto px-6 text-center z-10"
+      <motion.div
+        className="w-full h-full mx-auto px-6 text-center z-10 relative"
         variants={containerVariants}
         initial="hidden"
         animate="show"
       >
-        <motion.div variants={itemVariants} className="inline-block mb-6 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-100/50 text-sky-700 text-sm font-semibold tracking-wide shadow-sm">
-          Introducing Airshare 2.0
-        </motion.div>
-        
-        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-serif leading-[1.1] mb-8 text-slate-900">
+        {/* Gradient texture behind text */}
+        <div className="absolute inset-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/flow.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-serif leading-[1.1] mb-8 mt-4 text-slate-900 relative">
           From Camera to Editor. <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">Instantly.</span>
         </motion.h1>
@@ -59,14 +68,14 @@ export default function Hero() {
             Get Early Access
           </button>
           <button className="px-8 py-4 bg-white text-slate-800 border border-slate-200 rounded-full font-semibold hover:bg-slate-50 transition-colors shadow-sm w-full sm:w-auto flex items-center justify-center gap-2">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3" /></svg>
             Watch Demo
           </button>
         </motion.div>
       </motion.div>
 
       {/* Hero Visual (Mockup overlay abstractly) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 1, type: "spring" }}
@@ -92,7 +101,7 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-sky-500/20 flex items-center justify-center backdrop-blur-md border border-sky-400/30 text-sky-300">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="5 3 19 12 5 21 5 3" /></svg>
                     </div>
                   </div>
                 </div>
@@ -106,6 +115,6 @@ export default function Hero() {
           </div>
         </div>
       </motion.div>
-    </section>
+    </section >
   );
 }
