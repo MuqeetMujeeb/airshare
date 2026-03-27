@@ -19,7 +19,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-white pt-20 pb-32">
+    <section className="relative w-screen h-screen overflow-hidden">
 
       {/* Background abstract gradients
       <div className="absolute top-0 w-full h-full overflow-hidden -z-10 bg-white">
@@ -36,7 +36,7 @@ export default function Hero() {
       </div> */}
 
       <motion.div
-        className="w-full h-full mx-auto px-6 text-center z-10 relative"
+        className="w-screen h-screen px-0 text-center z-10 relative"
         variants={containerVariants}
         initial="hidden"
         animate="show"
