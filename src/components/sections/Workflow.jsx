@@ -63,7 +63,7 @@ export default function Workflow() {
   const pathHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="py-20 px-6 bg-white relative overflow-hidden flex flex-col items-center">
+    <section id="how-it-works" className="py-20 px-6 bg-white relative overflow-hidden flex flex-col items-center">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-slate-50/50 rounded-full blur-[120px] -z-10" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-sky-50/30 rounded-full blur-[120px] -z-10" />

@@ -23,7 +23,7 @@ const comparisons = [
 
 export default function Comparison() {
   return (
-    <section className="py-20 px-6 bg-slate-50 relative overflow-hidden flex flex-col items-center border-t border-slate-100">
+    <section id="features" className="py-20 px-6 bg-slate-50 relative overflow-hidden flex flex-col items-center border-t border-slate-100">
       
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-60">
